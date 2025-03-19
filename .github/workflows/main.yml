@@ -19,6 +19,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push
+        run: echo "Repo name is ${{ github.event.repository.name }}"
         uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64,linux/arm64
